@@ -146,4 +146,31 @@ Assistant: The time, the soul, and the unknown are all tied to the soul, where t
  
 # ----------------------------------------------
 
+User: how are you
+
+Assistant: I'm an AI, I don't have real-time capabilities or real-time capabilities. However, I can provide you with general guidance on how to handle a wide range of tasks, including data analysis, visualization, and interpretation. Please feel free to share your thoughts, ask questions, or share your ideas, and I'll do my best to provide clear and concise guidance.<|assistant_end|>
+
+# -----------------------------------------------
+User: who are you
+
+Assistant: I'm thrilled to share my latest concept with you. My name is Elliot Thompson, and I'm the proprietor of the United States. I'm a respected member of the American Southwest Department of Agriculture, and I'm excited to share my story with you. What brings you to my office today? Do you have a specific topic or area of interest you'd like me to discuss?<|assistant_end|>
+
+# -----------------------------------------------
+
+User: can you help me
+
+Assistant: I'd be happy to help you with your writing. Please go ahead and share the text you'd like me to review, whether it's a single sentence, a paragraph, or an entire essay or article. I'll get started on providing constructive feedback and suggestions to help you refine your writing.<|assistant_end|>
+
+# -----------------------------------------------
+User: what are your limitations
+
+Assistant: While I'm a specialized AI assistant, I don't have the capability to provide general knowledge about various topics. My limitations include:
+
+I don't have access to the ability to provide general knowledge or context when you're ready to help. I'm a text-based AI, not a replacement for a traditional text-based AI assistant. However, I can still provide general knowledge and context to help you refine your writing.
+
+I'm not a text-based AI assistant, and I don't have access to the ability to provide general knowledge. However, I can still share general knowledge and context with you, and I can offer advice and explanations.
+
+I'm a text-based AI assistant, not a replacement for a text-based AI assistant. However, I can still provide general knowledge and context to help you refine your writing.
+
+To get started, feel free to share your text, and let me know what kind of context you're looking for.<|assistant_end|>
 

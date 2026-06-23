@@ -9,7 +9,7 @@
 
 
 export OMP_NUM_THREADS=1
-export NANOCHAT_BASE_DIR="/scratch/$USER/nanochat" # fix this
+export NANOCHAT_BASE_DIR="/scratch/$USER/labs/trial-lab03/nanochat" # fix this
 mkdir -p $NANOCHAT_BASE_DIR
 
 export DEPTH=6
@@ -63,18 +63,17 @@ echo "Waiting for dataset download to complete..."
 wait $DATASET_DOWNLOAD_PID
 
 # d24 model (slightly undertrained to beat GPT-2 => decrease data:params ratio from compute optimal 10.5 (default) to 8)
-torchrun --standalone --nproc_per_node=8 -m scripts.base_train -- --depth=$DEPTH --target-param-data-ratio=8 --device-batch-size=$DEVICE_BATCH_SIZE --fp8 --run=$WANDB_RUN # evaluate the model: CORE metric, BPB on train/val, and draw samples
-torchrun --standalone --nproc_per_node=8 -m scripts.base_eval -- --device-batch-size=$DEVICE_BATCH_SIZE 
+python -m torch.distributed.run --standalone --nproc_per_node=1 -m scripts.base_train -- --depth=$DEPTH --target-param-data-ratio=8 --device-batch-size=$DEVICE_BATCH_SIZE --fp8 --run=$WANDB_RUN
 
+python -m torch.distributed.run --standalone --nproc_per_node=1 -m scripts.base_eval -- --device-batch-size=$DEVICE_BATCH_SIZE
 # ---------------------------------------------
 # SFT 
 curl -L -o "$NANOCHAT_BASE_DIR/identity_conversations.jsonl" https://karpathy-public.s3.us-west-2.amazonaws.com/identity_conversations.jsonl
 
 # run SFT and eval the model
-torchrun --standalone --nproc_per_node=8 -m scripts.chat_sft -- --device-batch-size=$DEVICE_BATCH_SIZE --run=$WANDB_RUN
-torchrun --standalone --nproc_per_node=8 -m scripts.chat_eval -- -i sft
+python -m torch.distributed.run --standalone --nproc_per_node=1 -m scripts.chat_sft -- --device-batch-size=$DEVICE_BATCH_SIZE --run=$WANDB_RUN
 
-
+python -m torch.distributed.run --standalone --nproc_per_node=1 -m scripts.chat_eval -- -i sft
 # ---------------------------------------------
 # generate full report 
 python -m nanochat.report generate

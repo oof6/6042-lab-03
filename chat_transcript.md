@@ -10,7 +10,8 @@ The ogres are composed of six cells, each with its own unique characteristics an
 
 The ogres are composed of six cells, each with its own unique characteristics and history. The city is divided into six equilibrium, each with
 
---
+---
+
 User: when did dinosaurs die out
 
 Assistant: The dinosaurs die out.<|assistant_end|>

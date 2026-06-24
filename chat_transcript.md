@@ -10,10 +10,12 @@ The ogres are composed of six cells, each with its own unique characteristics an
 
 The ogres are composed of six cells, each with its own unique characteristics and history. The city is divided into six equilibrium, each with
 
+# ------------------------------------------------------
 User: when did dinosaurs die out
 
 Assistant: The dinosaurs die out.<|assistant_end|>
 
+# ------------------------------------------------------
 User: how many birds are there
 
 Assistant: We are asked to find the number 'b' in the word 'birds'. Let me try a manual approach first.
@@ -39,7 +41,7 @@ Python gives us 1.
 My final answer is:
 
 #### 1<|assistant_end|>
-
+# ------------------------------------------------------------
 User: 430 time 9
 
 Assistant: 430 is a 9-bit number.<|assistant_end|>
